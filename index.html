@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhi Raj Gupta — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* ==== Allow scroll for entire page ==== */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+
+    /* ==== Make each section full-screen height ==== */
+    section {
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    /* ====== ABHI.HTML STYLES ====== */
+    section#intro {
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at bottom, #0a0a1a 0%, #000010 80%);
+      color: white;
+    }
+    .stars { position:absolute;width:100%;height:100%;background:transparent;overflow:hidden;}
+    .star {position:absolute;background:white;border-radius:50%;opacity:0.8;animation:twinkle 2s infinite ease-in-out;}
+    @keyframes twinkle {0%,100%{opacity:0.3;transform:scale(1);}50%{opacity:1;transform:scale(1.2);}}
+    .shooting-star{position:absolute;width:2px;height:100px;background:linear-gradient(45deg,white,transparent);opacity:0.8;transform:rotate(45deg);animation:shoot 3s linear infinite;}
+    @keyframes shoot{0%{transform:translate(-100px,-100px)rotate(45deg);opacity:1;}100%{transform:translate(120vw,120vh)rotate(45deg);opacity:0;}}
+
+    @import url(https://fonts.googleapis.com/css?family=Dancing+Script|Roboto);
+    *,*:after,*:before{box-sizing:border-box;}
+    body{text-align:center;font-family:'Roboto',sans-serif;}
+    .moon {
+  position:absolute ;
+  top: 60px;
+  right: 100px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, #f9f9f9, #dcdcdc 60%, #b0b0b0);
+  border-radius: 50%;
+  box-shadow: 0 0 40px 10px rgba(255,255,255,0.3);
+  z-index: 1;
+}
+
+    .panda{position:relative;width:200px;margin:50px auto;}
+    .face{width:200px;height:200px;background:#fff;border-radius:100%;margin:50px auto;box-shadow:0 10px 15px rgba(0,0,0,0.15);z-index:50;position:relative;}
+    .ear,.ear:after{position:absolute;width:80px;height:80px;background:#bc8a2c;z-index:5;left:-15px;top:-15px;border:10px solid #fff;border-radius:100%;}
+    .ear:after{content:'';left:137px;}
+    .eye-shade{background:#000;width:50px;height:70px;position:absolute;margin:10px;top:35px;left:25px;transform:rotate(220deg);border-radius:25px/20px 30px 35px 40px;}
+    .eye-shade.rgt{transform:rotate(140deg);left:105px;}
+    .eye-white{position:absolute;width:30px;height:30px;border-radius:100%;background-color:#fff;z-index:500;left:40px;top:75px;overflow:hidden;}
+    .eye-white.rgt{right:40px;left:auto;}
+    .eye-ball{position:absolute;width:0;height:0;top:20px;left:20px;max-width:10px;max-height:10px;transition:0.1s;}
+    .eye-ball:after{content:'';background:#000;position:absolute;border-radius:100%;right:0;bottom:0;width:15px;height:15px;animation:eye-blink 2s linear 2s infinite normal;}
+    .nose{position:absolute;height:20px;width:35px;background:#000;bottom:40px;left:0;right:0;margin:auto;border-radius:50px 20px/30px 15px;transform:rotate(15deg);}
+    .body{background:#fff;position:absolute;width:250px;height:282px;top:200px;left:-20px;border-radius:100px;box-shadow:0 5px 10px rgba(0,0,0,0.3);}
+    .hand,.hand:after,.hand:before{width:40px;height:30px;border-radius:50px;box-shadow:0 2px 3px rgba(0,0,0,0.15);background:#000;margin:5px;position:absolute;top:70px;left:-25px;}
+    .hand:after,.hand:before{content:'';left:-5px;top:11px;}
+    .hand:before{top:26px;}
+    .hand.rgt{left:auto;right:-25px;}
+    .hand.rgt:after,.hand.rgt:before{left:auto;right:-5px;}
+    .foot{top:360px;left:-80px;position:absolute;background:#000;width:82px;height:120px;z-index:1400;border-radius:40px/26px 63px;box-shadow:0 5px 5px rgba(0,0,0,0.2);}
+    .foot:after{content:'';width:55px;height:65px;background:#222;border-radius:100%;position:absolute;bottom:10px;left:0;right:0;margin:auto;}
+    .foot .finger,.foot .finger:after,.foot .finger:before{position:absolute;width:25px;height:35px;background:#222;border-radius:100%;top:10px;right:5px;}
+    .foot .finger:after,.foot .finger:before{content:'';right:30px;width:20px;top:0;}
+    .foot .finger:before{right:55px;top:5px}
+    .foot.rgt{left:auto;right:-80px;}
+    .foot.rgt .finger,.foot.rgt .finger:after,.foot.rgt .finger:before{left:5px;right:auto;}
+    .foot.rgt .finger:after{left:30px;}
+    .foot.rgt .finger:before{left:55px;}
+
+    form{max-width:400px;padding:20px 40px;background:#9ea585;height:300px;margin:auto;display:block;box-shadow:0 10px 15px rgba(0,0,0,0.15);transition:0.3s;position:relative;transform:translateY(-100px);z-index:500;border:1px solid #eee;}
+    h1{color:#201212;font-family:'Dancing Script',cursive;}
+    .btn{text-decoration:none;background:#714646;padding:5px;width:130px;height:30px;border:1px solid olive;margin-top:25px;cursor:pointer;transition:0.3s;box-shadow:0 50px rgb(117, 112, 208) inset;color:#280000;}
+    .btn:hover{box-shadow:0 0 #FF4081 inset;color:#FF4081;}
+
+    section#resume { background: #f6f8fb; color: #111827; padding: 40px 0; }
+    .resume{width:90%;max-width:900px;margin:auto;background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(16,24,40,0.08);overflow:hidden;display:grid;grid-template-columns:320px 1fr;}
+    .sidebar{background:linear-gradient(180deg,#0f172a,#111827);color:#fff;padding:30px;display:flex;flex-direction:column;gap:18px;}
+    .photo{width:140px;height:140px;border-radius:12px;overflow:hidden;margin:0 auto;border:4px solid rgba(255,255,255,0.08);}
+    .photo img{width:100%;height:100%;object-fit:cover;}
+    .name{text-align:center;font-weight:700;margin-top:8px;}
+    .title{text-align:center;font-size:13px;color:rgba(255,255,255,0.8);}
+    .download-btn{margin-top:auto;display:block;text-align:center;padding:10px 12px;border-radius:10px;background:linear-gradient(90deg,#0066ff,#7c5cff);color:white;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(0,102,255,0.14);}
+    .content{padding:30px 36px;}
+    .section{margin-bottom:20px;}
+    .job ul{margin:8px 0 0 18px;color:#374151;}
+    @media (max-width:900px){.resume{grid-template-columns:1fr;}}
+    
+  </style>
+</head>
+<body>
+
+
+  <!-- ===== ABHI.HTML SECTION ===== -->
+  <section id="intro">
+    <div class="moon"></div> <!-- 🌙 Added Moon -->
+    <div class="stars" id="stars"></div>
+    <div class="panda">
+      <div class="ear"></div>
+      <div class="face">
+        <div class="eye-shade"></div>
+        <div class="eye-white"><div class="eye-ball"></div></div>
+        <div class="eye-shade rgt"></div>
+        <div class="eye-white rgt"><div class="eye-ball"></div></div>
+        <div class="nose"></div>
+      </div>
+      <div class="body"></div>
+      <div class="foot"><div class="finger"></div></div>
+      <div class="foot rgt"><div class="finger"></div></div>
+    </div>
+
+    <form>
+      <div class="hand"></div><div class="hand rgt"></div>
+      <h1>Abhi Raj Gupta</h1>
+      <h4>Second Year CSE, Central University of Jharkhand</h4>
+      <h4>Degree: Integrated B.Tech & M.Tech (CSE)</h4>
+      <a href="./abhi2.html" class="btn">View Details</a>
+      <br>
+      <br>
+      <a href="#resume" class="btn">View Resume ↓</a>
+    </form>
+  </section>
+
+  <!-- ===== RESUME SECTION ===== -->
+  <section id="resume">
+    <article class="resume" role="document">
+
+    <aside class="sidebar" aria-label="Contact and skills">
+      <div style="text-align:center">
+        <div class="photo">
+          
+          <img src="ABHI.jpg" alt="Profile photo placeholder">
+        </div>
+        <div class="name">Abhi Raj Gupta</div>
+        <div class="title">Full Stack Developer</div>
+      </div>
+
+      <div>
+        <div class="section-heading">Contact</div>
+        <div class="contact-list">
+          <div><i class="fas fa-phone" style="width:16px"></i> <a href="tel:+919263945768">+91 9835637991</a></div>
+          <div><i class="fas fa-envelope" style="width:16px"></i> <a href="mailto:youremail@example.com">abhirajgupta2204@gmail.com</a></div>
+          <div><i class="fas fa-map-marker-alt" style="width:16px"></i> Ranchi, Jharkhand, India</div>
+          <div><i class="fab fa-github" style="width:16px"></i> <a href="#">github.com/Abhi-raj-gupta</a></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-heading">Skills</div>
+        <div class="chips">
+         <ul>
+          <li>Python</li>
+          <li>Advance Python</li>
+          <li>Machine Learning</li>
+          <li>React</li>
+          <li>Node.Js</li>
+          <li>Docker</li>
+          <li>SQL</li>
+          <li>JavaScript</li>
+          <li>Graphics Design</li>
+          
+
+         </ul>
+        </div>
+      </div>
+
+      <a class="download-btn" href="#" onclick="window.print();return false;">Download / Print</a>
+    </aside>
+
+
+    <section class="content">
+
+      <div class="summary">
+        <strong>Professional Summary</strong>
+        <p>Results-driven software developer with 2+ years of experience building web applications and data-driven tools. Strong background in Python, full-stack JavaScript, and machine learning. Passionate about writing maintainable code and delivering user-focused solutions.</p>
+      </div>
+
+      <div class="section">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h3 style="margin:0">Experience</h3>
+          <div style="color:var(--muted);font-size:14px">2+ years</div>
+        </div>
+
+        <div class="job">
+          <div class="meta">
+            <div>
+              <div class="role">Member of CCPC</div>
+              <div class="company">Acme Tech • Bangalore</div>
+            </div>
+            <div class="dates">Jul 2024 — Present</div>
+          </div>
+          <ul>
+            <li>Built and maintained REST APIs using Node.js and Express, reducing response time by 30%.</li>
+            <li>Implemented CI/CD pipelines using GitHub Actions and Docker for automated deployments.</li>
+            <li>Collaborated with product and design teams to ship new features on schedule.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="meta">
+            <div>
+              <div class="role">Data Science Intern</div>
+              <div class="company">DataLabs • Ranchi</div>
+            </div>
+            <div class="dates">Jan 2024 — Jun 2025</div>
+          </div>
+          <ul>
+            <li>Developed classification models and preprocessing pipelines for text data.</li>
+            <li>Improved model accuracy by 8% through feature engineering and hyperparameter tuning.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 style="margin:0 0 8px 0">Projects</h3>
+        <div class="job">
+          <div class="role">Hate Speech Detection (Hackathon Project)</div>
+          <div class="company" style="margin-bottom:6px">Personal / Team Project</div>
+          <ul>
+            <li>Create a game (Brush Rush) website </li>
+            <li>Built an NLP pipeline using TF-IDF and Logistic Regression and deployed model with a Flask API and simple frontend.</li>
+            <li>Prepared a deployable repo for Hugging Face Spaces for demo and evaluation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 style="margin:0 0 8px 0">Education</h3>
+        <div class="edu">
+          <div>
+            <div style="font-weight:600">Central University of Jharkhand</div>
+            <div style="color:var(--muted);font-size:14px"> Intergreated B.Tech/M.Tech— Computer Science</div>
+          </div>
+          <div style="color:var(--muted);font-size:13px">2024 — 2029</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 style="margin:0 0 8px 0">Certifications & Awards</h3>
+        <ul>
+          <li>Certified NCC (A,B) — 22 Jharkhand Battalion , Hazaribagh </li>
+          <li>Finalist in Hackqubit —  Hackathon 2025 </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3 style="margin:0 0 8px 0">Languages</h3>
+        <div style="color:var(--muted)">English (Fluent) • Hindi (Native)</div>
+      </div>
+  </section>
+  <!-- === Popup Modal === -->
+
+
+  <script>
+    
+    // Generate stars
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 200; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      const size = Math.random() * 2 + 'px';
+      star.style.width = size;
+      star.style.height = size;
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 5 + 's';
+      starsContainer.appendChild(star);
+    }
+    for (let i = 0; i < 5; i++) {
+      const shootingStar = document.createElement('div');
+      shootingStar.classList.add('shooting-star');
+      shootingStar.style.top = Math.random() * window.innerHeight + 'px';
+      shootingStar.style.left = Math.random() * window.innerWidth + 'px';
+      shootingStar.style.animationDelay = Math.random() * 10 + 's';
+      starsContainer.appendChild(shootingStar);
+    }
+    // panda eye 
+
+    const eyes = document.querySelectorAll('.eye-ball');
+
+    document.addEventListener('mousemove', (event) => {
+      eyes.forEach((eye) => {
+        const rect = eye.getBoundingClientRect();
+        const eyeX = rect.left + rect.width / 2;
+        const eyeY = rect.top + rect.height / 2;
+
+        const deltaX = event.clientX - eyeX;
+        const deltaY = event.clientY - eyeY;
+
+        const angle = Math.atan2(deltaY, deltaX);
+        const maxMove = 5; // controls how far the eyeball moves
+
+        const x = Math.cos(angle) * maxMove;
+        const y = Math.sin(angle) * maxMove;
+
+        eye.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    });
+    
+  </script>
+  
+  <!-- === Popup Modal === -->
+  <div id="detailsPopup" style="
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+    overflow:auto;
+  ">
+    <div style="
+      background:transparent;
+      border-radius:10px;
+      width:90%;
+      max-width:650px;
+      margin:50px auto;
+      animation:fadeIn 0.4s ease;
+      position:relative;
+    ">
+      <span id="closePopup" style="
+        position:absolute;
+        top:10px;
+        right:15px;
+        font-size:26px;
+        color:white;
+        cursor:pointer;
+        font-weight:bold;
+      ">&times;</span>
+      <iframe src="" id="popupFrame" style="
+        width:100%;
+        height:80vh;
+        border:none;
+        border-radius:10px;
+      "></iframe>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fadeIn {from {opacity:0;transform:scale(0.95);} to {opacity:1;transform:scale(1);}}
+  </style>
+
+  <script>
+    // === Popup Logic ===
+    const popup = document.getElementById('detailsPopup');
+    const frame = document.getElementById('popupFrame');
+    const closePopup = document.getElementById('closePopup');
+
+    document.querySelector('.btn[href="./abhi2.html"]').addEventListener('click', (e) => {
+      e.preventDefault();
+      frame.src = 'abhi2.html';
+      popup.style.display = 'flex';
+    });
+
+    closePopup.addEventListener('click', () => {
+      popup.style.display = 'none';
+      frame.src = '';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        popup.style.display = 'none';
+        frame.src = '';
+      }
+    });
+  </script>
+</body>
+</html>

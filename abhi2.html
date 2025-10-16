@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education & Contact Info</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      /* background: radial-gradient(circle at top, #0b0c20, #050510); */
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* flex-direction: column; */
+      /* overflow-x: hidden; */
+    }
+
+    .container {
+      background: rgba(30, 30, 60, 0.7);
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+      width: 90%;
+      max-width: 600px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h2 {
+      color: #FFD43B;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 0.95rem;
+      color: #f0f0f0;
+      margin-bottom: 25px;
+    }
+
+    .contact-info {
+      margin-top: 15px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+
+    .highlight {
+      color: #FFD43B;
+      font-weight: 600;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 20px 0;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      font-size: 1.8rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .linkedin { color: #0A66C2; }
+    .instagram { color: #E4405F; }
+    .github { color: #fff; }
+    .twitter { color: #1DA1F2; }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 25px;
+      background: linear-gradient(90deg, #ff4d79, #6c63ff);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #6c63ff, #ff4d79);
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>🎓 Education Details</h2>
+    <p>
+      Intermediate :- <strong>PITTS MODERN SCHOOL GOMIA, Ranchi, JH</strong><br>
+      NCC (A,B) Certificate Holder Passout from <strong> 22 Jharkhand Battalion , Hazaribagh</strong>
+    </p>
+
+    <h2>📞 Contact Info</h2>
+    <div class="contact-info">
+      <p><span class="highlight">Phone:</span> +91 9835637991</p>
+      <p><span class="highlight">Personal Email:</span> abhirajgupta2204@gmail.com</p>
+      <p><span class="highlight">College Email:</span> abhi.24190503002@cuj.ac.in</p>
+    </div>
+
+    <h2>🌐 Follow Me</h2>
+    <div class="social-icons">
+      <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="github"><i class="fab fa-github"></i></a>
+      <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <a href="./index.html" class="btn">View Resume </a>
+  </div>
+</body>
+</html>
